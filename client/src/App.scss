@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+
+}
+
+@font-face {
+  font-family: 'fl-bigmug-line';
+  src: local('fl-bigmug-line'), url(./fonts/fl-bigmug-line.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'lg';
+  src: local('lg'), url(./fonts/lg.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'material-design';
+  src: local('material-design'), url(./fonts/material-design.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'materialdesignicons-webfont';
+  src: local('materialdesignicons-webfont'), url(./fonts/materialdesignicons-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'MaterialIcons-Regular';
+  src: local('MaterialIcons-Regular'), url(./fonts/MaterialIcons-Regular.woff) format('woff');
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+article, section{
+  color: black;
+}
+
+.slide{
+  height: 80vh;
+  color: white;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2em;
+  
+h2{
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+  p{
+    font-size: 3em;
+    margin: 0;
+  }
+}
+
+
+
+
+
+

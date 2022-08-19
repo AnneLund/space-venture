@@ -1,22 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import {useState, useEffect} from 'react';
+import './App.scss';
+import 'react-slideshow-image/dist/styles.css'
+import {Home} from './pages/home.js';
+import "./fonts/fl-bigmug-line.ttf";
+import "./fonts/lg.woff"
 
 function App() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      <p>{!data ? "Loading..." : data}</p>
-      </header>
+     <Home/>
     </div>
   );
 }
