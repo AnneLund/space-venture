@@ -1,10 +1,11 @@
 import {Link} from 'react-router-dom'
+import {TiSocialFacebookCircular, TiSocialTwitter, TiSocialGooglePlus, TiSocialInstagram} from 'react-icons/ti'
 
 
 const Navbar = () => {
     return(
         <nav>
-            <ul>
+            <ul className='links'>
                 <li>
                     <Link to="/">Hjem</Link>
                 </li>
@@ -24,6 +25,13 @@ const Navbar = () => {
                     <Link to="/contact">Kontakt</Link>
                 </li>
             </ul>
+<ul className='icons'>
+    <li><TiSocialFacebookCircular/></li>
+    <li><TiSocialTwitter/></li>
+    <li><TiSocialGooglePlus/></li>
+    <li><TiSocialInstagram/></li>
+</ul>
+
         </nav>
      
     )
