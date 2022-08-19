@@ -1,26 +1,8 @@
 import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 // import {useState, useEffect} from 'react';
 // import Axios from 'axios'
 
-const Slideshow = () => {
-
-// const [data, setData] = useState([]);
-
-//   useEffect(()=> {
-
-//     const fetchData = async () => {
-//       const result = await Axios(
-//         'http://localhost:3001/api',
-
-//         );
-
-//       setData(result.data);
-//     };
-
-//      fetchData();
-//     }, []);
-
-  
     const slideImages = [
       {
         url: 'https://i.imgur.com/EWpmTXZ.jpg',
@@ -39,12 +21,42 @@ const Slideshow = () => {
       },
     ];
 
+  
+    const slideProperties = {
+      duration: 5000,
+      transitionDuration: 500,
+      infinite: true,
+      indicators: false,
+      arrows: false,
+      onChange: (oldIndex, newIndex) => {
+        console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+      }
+    }
 
+const Slideshow = () => {
+//   const [data, setData] = useState([]);
+
+//   useEffect(()=> {
+
+//     const fetchData = async () => {
+//       const result = await Axios(
+//         'http://localhost:3001/api',
+
+//         );
+
+//       setData(result.data);
+//     };
+
+//      fetchData();
+//     }, []);
+
+  
+// console.log(data[0])
 
 return(
 <section className="slide-container">
   <article >
- <Slide>
+ <Slide {...slideProperties}>
          {slideImages.map((slideImage, index)=> (
             <div className="each-slide" key={index}>
               <div className="slide" style={{'backgroundImage': `url(${slideImage.url})`}}>

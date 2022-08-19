@@ -1,12 +1,14 @@
 import {Slideshow} from '../components/Slideshow'
+import Frontfigure from '../components/Figure'
 
 const Home = () => {
  
     return (
-        <section>
+        <>
             <Slideshow/>
-        </section>
+            <Frontfigure/>
+        </>
     )
 }
 
-export {Home};
+export default Home;
