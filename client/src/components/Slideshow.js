@@ -1,19 +1,21 @@
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-// import {useState, useEffect} from 'react';
-// import Axios from 'axios'
+import {useState, useEffect} from 'react';
+import Axios from 'axios'
 
     const slideImages = [
-      {
-        url: 'https://i.imgur.com/EWpmTXZ.jpg',
-        h2: 'Se jorden stå op',
-        content: 'Flyv med til månen!'
-      },
       {
         url: 'https://i.imgur.com/VO6vyUW.jpg',
         h2: 'Oplev den røde planet',
         content: 'Turen går til Mars!'
       },
+
+      {
+         url: 'https://i.imgur.com/EWpmTXZ.jpg',
+        h2: 'Se jorden stå op',
+        content: 'Flyv med til månen!'
+      },
+      
       {
         url: 'https://i.imgur.com/SZ37wQX.jpg',
         h2: 'Tophastighed på 1.000.000 km/t',
@@ -34,24 +36,21 @@ import 'react-slideshow-image/dist/styles.css'
     }
 
 const Slideshow = () => {
-//   const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-//   useEffect(()=> {
+  useEffect(()=> {
 
-//     const fetchData = async () => {
-//       const result = await Axios(
-//         'http://localhost:3001/api',
+    const fetchData = async () => {
+      const result = await Axios(
+'http://localhost:3002/api');
 
-//         );
+      setData(result.data);
+    };
 
-//       setData(result.data);
-//     };
+     fetchData();
+     console.log(data)
+    }, []);
 
-//      fetchData();
-//     }, []);
-
-  
-// console.log(data[0])
 
 return(
 <section className="slide-container">
@@ -61,8 +60,21 @@ return(
             <div className="each-slide" key={index}>
               <div className="slide" style={{'backgroundImage': `url(${slideImage.url})`}}>
                 <div className="text">
-                  <h2> {slideImage.h2}</h2>
-                  <p>{slideImage.content}</p>  
+                {data.map((text, idx) => {
+
+if (index === idx) {
+  return(
+    <>
+      <h2>{text.title}</h2> 
+      <p>{text.content}</p> 
+    </>
+
+  )
+  
+}
+
+
+                })} 
                 </div>
               </div>
             </div>

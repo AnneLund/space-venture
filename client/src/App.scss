@@ -3,31 +3,6 @@
   color:black;
 }
 
-@font-face {
-  font-family: 'fl-bigmug-line';
-  src: local('fl-bigmug-line'), url(./fonts/fl-bigmug-line.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'lg';
-  src: local('lg'), url(./fonts/lg.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'material-design';
-  src: local('material-design'), url(./fonts/material-design.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'materialdesignicons-webfont';
-  src: local('materialdesignicons-webfont'), url(./fonts/materialdesignicons-webfont.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'MaterialIcons-Regular';
-  src: local('MaterialIcons-Regular'), url(./fonts/MaterialIcons-Regular.woff) format('woff');
-}
-
 article, section{
   color: black;
   h1{
@@ -101,6 +76,37 @@ h2{
   img{
     margin: 0 1em;
     width: 20%;
+  }
+}
+
+.aboutus{
+  display: flex;
+  gap: 2em;
+  padding: 0 5em;
+  figcaption{
+    text-align: left;
+    padding: 0 3em;
+
+    h2{
+      font-size: 2em;
+    }
+
+    h4{
+      width: 100%;
+      position: relative;
+      text-transform: uppercase;
+      color: #01b3a7;
+
+      &:before{
+        position: absolute;
+        background: linear-gradient(to right, #01b3a7 50%, #ccc 50%);
+        height: 5px;
+        content: '';
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+      }
+    }
   }
 }
 

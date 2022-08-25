@@ -1,5 +1,6 @@
 import {Slideshow} from '../components/Slideshow'
 import Frontfigure from '../components/Figure'
+import AboutUs from '../components/aboutus';
 
 const Home = () => {
  
@@ -7,6 +8,7 @@ const Home = () => {
         <>
             <Slideshow/>
             <Frontfigure/>
+            <AboutUs/>
         </>
     )
 }
