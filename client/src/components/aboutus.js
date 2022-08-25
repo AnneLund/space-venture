@@ -16,13 +16,16 @@ const AboutUs = () => {
     };
 
      fetchData();
-     console.log(data)
+   
     }, []);
+
+    console.log(data)
     return(
         <section>
 {data.map(text => {
+
     return(
-        <figure className='aboutus'>
+        <figure className='aboutus' key={text.title} >
            <img src={aboutus}/>
            <figcaption>
             <h2>Lidt om os</h2>

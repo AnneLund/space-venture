@@ -110,6 +110,23 @@ h2{
   }
 }
 
+.team{
+  padding-top: 2em;
+}
+
+.team-members{
+  display: flex;
+  justify-content: center;
+
+ .title{
+  color: #01b3a7;
+ }
+
+ p, h5{
+  margin: 0.1em;
+ }
+}
+
 
 
 

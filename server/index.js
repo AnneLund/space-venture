@@ -35,6 +35,18 @@ app.get("/api/about", (req,res)=>{
     });   
     });
 
+    //Route til mit table 'team' i min database
+
+app.get("/api/team", (req,res)=>{
+    db.query("SELECT * FROM team", (err,result)=>{
+        if(err) {
+        console.log(err)
+        } 
+    res.send(result)
+    console.log(result)
+    });   
+    });
+
 app.listen(port, () => {
     console.log(`Serveren kører på ${port}`)
   })

@@ -1,6 +1,7 @@
 import {Slideshow} from '../components/Slideshow'
 import Frontfigure from '../components/Figure'
 import AboutUs from '../components/aboutus';
+import Team from '../components/team';
 
 const Home = () => {
  
@@ -9,6 +10,7 @@ const Home = () => {
             <Slideshow/>
             <Frontfigure/>
             <AboutUs/>
+            <Team/>
         </>
     )
 }
