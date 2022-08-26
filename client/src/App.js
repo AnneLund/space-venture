@@ -1,5 +1,4 @@
 import './App.scss';
-import 'react-slideshow-image/dist/styles.css'
 import Home from './pages/home.js';
 import Navbar from './components/Navbar'
 import Spaceship from './pages/spaceship'
@@ -8,6 +7,9 @@ import Security from './pages/security'
 import Trips from './pages/trips'
 import Gallery from './pages/gallery'
 
+//BrowserRouteren er parent-componentet der indeholder alle de andre komponenter.
+//Routes definerer vores stier. En hjemmeside kan have flere routes.
+//Route komponentet render indholdet når stien matcher den nuværende url.
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
       <Route path="trips" element={<Trips/>}/>
       <Route path="gallery" element={<Gallery/>}/>
     </Routes>
-    </BrowserRouter>
+  </BrowserRouter>
     </div>
   );
 }
