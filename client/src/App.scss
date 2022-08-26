@@ -11,7 +11,10 @@ article, section{
 }
 
 a{
-  text-decoration: none;}
+  text-decoration: none;
+}
+
+//NAVBAR
 
 nav{
   background-color: rgb(11, 11, 90);
@@ -47,6 +50,8 @@ nav{
   }
 }
 
+//SLIDESHOW
+
 .slide{
   height: 80vh;
   color: white;
@@ -56,9 +61,9 @@ nav{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2em;
+  padding: 5em;
   
-h2{
+h3{
   margin: 0;
   text-transform: uppercase;
   font-size: 1em;
@@ -125,6 +130,24 @@ h2{
  p, h5{
   margin: 0.1em;
  }
+}
+
+.newsletter{
+  background-image: url(./images/newsmail-bg.jpg);
+  min-height: 40vh;
+  padding-top: 5em;
+  h2{
+    color: white;
+  }
+  form{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+input, button{
+  padding: 1em;
+  margin: 1em;
+}
+  }
 }
 
 

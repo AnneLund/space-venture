@@ -55,13 +55,13 @@ return(
          {slideImages.map((slideImage, index)=> (
             <div className="each-slide" key={index}>
               <div className="slide" style={{'backgroundImage': `url(${slideImage.url})`}}>
-                <div className="text">
+                <div>
                 {data.map((text, idx) => {
 
                     if (index === idx) {
                     return(
-                      <div key={text.title}>
-                        <h2>{text.title}</h2> 
+                      <div className="text" key={text.title}>
+                        <h3>{text.title}</h3> 
                         <p>{text.content}</p> 
                       </div>
   )

@@ -47,6 +47,17 @@ app.get("/api/team", (req,res)=>{
     });   
     });
 
+app.post("/api/newsletter", (req, res) => {
+    const email = req.body.email
+    db.query(`INSERT INTO newsletter (email) VALUES ('${email}')`, (err,result)=>{
+        if(err) {
+        console.log(err)
+        } 
+    res.send(result)
+    console.log(result)
+    });      
+})
+
 app.listen(port, () => {
     console.log(`Serveren kører på ${port}`)
   })

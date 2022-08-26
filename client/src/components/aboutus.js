@@ -19,7 +19,6 @@ const AboutUs = () => {
    
     }, []);
 
-    console.log(data)
     return(
         <section>
 {data.map(text => {
